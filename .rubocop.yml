@@ -1,6 +1,15 @@
 # Omakase Ruby styling for Rails
 inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
+# The frontend projects are separate Git repositories that may be checked out
+# beneath this directory during local development.
+AllCops:
+  Exclude:
+    - ".bundle/**/*"
+    - "lifegraph-mobile/**/*"
+    - "lifegraph-web/**/*"
+    - "tmp/**/*"
+
 # Overwrite or add rules to create your own house style
 #
 # # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`

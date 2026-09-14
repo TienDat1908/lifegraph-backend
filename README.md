@@ -1,24 +1,39 @@
-# README
+# LifeGraph Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails API for the LifeGraph MVP. PostgreSQL is the source of truth for workspaces,
+entities, relationships, documents, activity, search, and permission-filtered AI
+context.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- Ruby 3.4.10
+- PostgreSQL
 
-* System dependencies
+## Local setup
 
-* Configuration
+Configure the database values shown in `.env.example` in your shell, then run:
 
-* Database creation
+```sh
+bundle install
+bin/rails db:prepare
+bin/rails server
+```
 
-* Database initialization
+The public integration endpoint is available at `GET /api/v1/system`.
 
-* How to run the test suite
+## Repository boundaries
 
-* Services (job queues, cache servers, search engines, etc.)
+`lifegraph-web` and `lifegraph-mobile` are separate Git repositories even when
+they are checked out inside this directory. They are intentionally ignored by
+the backend repository.
 
-* Deployment instructions
+## Security baseline
 
-* ...
+- Never commit `.env` files, `config/master.key`, connector keys, or AI provider
+  credentials.
+- Every future graph record must be scoped to a workspace and authorized on the
+  server. A workspace identifier supplied by a client is never sufficient proof
+  of access.
+- Private graph content must not be written to analytics or application logs.
+- Production database access should use a managed `DATABASE_URL` or injected
+  environment values.

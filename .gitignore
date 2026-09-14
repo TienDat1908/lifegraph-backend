@@ -1,0 +1,33 @@
+# Bundler
+/.bundle
+/vendor/bundle
+
+# Local environment and credentials
+/.env*
+!/.env.example
+/config/master.key
+/config/credentials/*.key
+
+# Runtime files
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+!/tmp/pids/
+!/tmp/pids/.keep
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/.keep
+
+# Test and coverage output
+/coverage
+
+# Editor and OS files
+/.idea
+/.vscode
+.DS_Store
+
+# The web and mobile projects are independent Git repositories.
+/lifegraph-web/
+/lifegraph-mobile/
