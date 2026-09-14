@@ -1,0 +1,57 @@
+current directory: /Users/tiendat/work/LifeGraph/lifegraph-backend/.bundle/ruby/3.1.0/gems/bigdecimal-4.1.3/ext/bigdecimal
+/Users/tiendat/.rbenv/versions/3.1.2/bin/ruby -I /Users/tiendat/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20260914-66781-6ljdzc.rb extconf.rb
+checking for __builtin_clz()... yes
+checking for __builtin_clzl()... yes
+checking for __builtin_clzll()... yes
+checking for float.h... yes
+checking for math.h... yes
+checking for stdbool.h... yes
+checking for stdlib.h... yes
+checking for x86intrin.h... no
+checking for intrin.h... no
+checking for ruby/atomic.h... yes
+checking for ruby/internal/has/builtin.h... yes
+checking for ruby/internal/static_assert.h... yes
+checking for rb_complex_real() in ruby.h... yes
+checking for rb_complex_imag() in ruby.h... yes
+checking for rb_opts_exception_p() in ruby.h... yes
+checking for rb_category_warn() in ruby.h... yes
+checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
+checking for RUBY_TYPED_EMBEDDABLE in ruby.h... no
+creating Makefile
+
+current directory: /Users/tiendat/work/LifeGraph/lifegraph-backend/.bundle/ruby/3.1.0/gems/bigdecimal-4.1.3/ext/bigdecimal
+make DESTDIR\= clean
+
+current directory: /Users/tiendat/work/LifeGraph/lifegraph-backend/.bundle/ruby/3.1.0/gems/bigdecimal-4.1.3/ext/bigdecimal
+make DESTDIR\=
+compiling bigdecimal.c
+In file included from bigdecimal.c:11:
+In file included from ./bigdecimal.h:13:
+In file included from /Users/tiendat/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/tiendat/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/tiendat/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/tiendat/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/tiendat/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+compiling missing.c
+In file included from missing.c:1:
+In file included from /Users/tiendat/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/tiendat/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/tiendat/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:29:
+/Users/tiendat/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rstring.h:464:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  464 |         struct RString retval;
+      |                        ^
+/Users/tiendat/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/core/rbasic.h:88:17: note: member 'klass' declared 'const' here
+   88 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+linking shared-object bigdecimal.bundle
+
+current directory: /Users/tiendat/work/LifeGraph/lifegraph-backend/.bundle/ruby/3.1.0/gems/bigdecimal-4.1.3/ext/bigdecimal
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bigdecimal.bundle ./.gem.20260914-66781-efaf18
